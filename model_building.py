@@ -96,9 +96,10 @@ mean_absolute_error(y_test,tpred_rf)
 #combine two or more models
 mean_absolute_error(y_test,(tpred_lm+tpred_rf)/2)
 
+#pickle the model => abstract and make it usable by other programs without retraining it
 import pickle
 pickl = {'model': gs.best_estimator_}
-pickle.dump( pickl, open( 'model_file' + ".p", "wb" ) )
+pickle.dump( pickl, open( 'model_file' + ".p", "wb" ) ) #save the model
 
 file_name = "model_file.p"
 with open(file_name, 'rb') as pickled:
