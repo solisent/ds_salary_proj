@@ -120,6 +120,7 @@ for i in df_pivots.columns:
 
 pd.pivot_table(df_pivots, index = 'Revenue', columns = 'python_yn', values = 'avg_salary', aggfunc = 'count')
 
+df.to_csv('eda_data.csv')
 #generating wordcloud
 from wordcloud import WordCloud, ImageColorGenerator, STOPWORDS
 from nltk.corpus import stopwords
